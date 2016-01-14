@@ -1,0 +1,3 @@
+user0001 true 
+user0002 false
+user0003 true
