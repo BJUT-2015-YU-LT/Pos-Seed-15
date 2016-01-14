@@ -1,3 +1,4 @@
+package pos;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -20,7 +21,7 @@ public class ItemManager {
 			e.printStackTrace();
 		}
 	}
-	public void addItem(String barcode, String name, String unit, double price, double discount){
+	public void addItem(String barcode, String name, String unit, Double price, Double discount){
 		int n=0;
 		for(Item item:items){
 			if(item.barcode.equals(barcode)){
@@ -32,15 +33,15 @@ public class ItemManager {
 		if(n==items.size())
 			items.addElement(new Item( barcode,name,unit,price,discount));
 	}
-	public double total(){
-		double  totals=0.0;
+	public Double total(){
+		Double  totals=0.0;
 		for(Item item:items){
 			totals+=item.getTotal();
 		}
 		return totals;
 	}
-	public double save(){
-		double  saves=0.0;
+	public Double save(){
+		Double  saves=0.0;
 		for(Item item:items){
 			saves+=item.getSave();
 		}
