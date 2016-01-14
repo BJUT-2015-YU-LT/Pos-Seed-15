@@ -1,12 +1,13 @@
+package pos;
 
 public class Index {
 	String barcode;  //商品编号
 	String name;	 //商品名
 	String unit;     //单位
-	double  price;    //商品单价
-	double discount;   //商品折扣率
+	Double  price;    //商品单价
+	Double discount;   //商品折扣率
 	boolean promotion; //是否 "买二赠一"
-	public Index(String bar, String nam, String uni, double pri,double dis,boolean pro){
+	public Index(String bar, String nam, String uni, Double pri,Double dis,boolean pro){
 		barcode=bar;
 		name=nam;
 		unit=uni;
@@ -23,10 +24,10 @@ public class Index {
 	public String getUnit() {
 		return unit;
 	}
-	public double getPrice() {
+	public Double getPrice() {
 		return this.price;
 	}
-	public double getDiscount() {
+	public Double getDiscount() {
 		return discount;
 	}
 	public boolean getPromotion() {

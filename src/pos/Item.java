@@ -1,14 +1,15 @@
+package pos;
 
 public class Item{
 	String barcode;  //商品编号
 	String name;	 //商品名
 	String unit;     //单位
-	double  price;   //商品单价
-	double discount; //商品折扣率
-	double total;    //总价
+	Double  price;   //商品单价
+	Double discount; //商品折扣率
+	Double total;    //总价
 	int num;        //商品数量
 	boolean promotion; //是否 "买二赠一"
-	public Item(String bar, String nam, String uni, double pri,double dis,boolean pro){
+	public Item(String bar, String nam, String uni, Double pri,Double dis,boolean pro){
 		barcode=bar;
 		name=nam;
 		unit=uni;
@@ -22,13 +23,13 @@ public class Item{
 		num++;
 		total=price*num*discount;
 	}
-	public double getTotal(){
+	public Double getTotal(){
 		if(promotion && num>=2){ //参加“买二赠一”
 			return (price*(num-num/2));
 		}
 		return total;
 	}
-	public double getSave(){
+	public Double getSave(){
 		if(promotion && num>=2){ //参加“买二赠一”
 			return price*(num/2);
 		}
