@@ -24,20 +24,20 @@ public class Item{
 		total=price*num*discount;
 	}
 	public Double getTotal(){
-		if(promotion && num>=2){ //参加“买二赠一”
-			return (price*(num-num/2));
+		if(promotion && num>2){ //参加“买二赠一”
+			return (price*(num-num/3));
 		}
 		return total;
 	}
 	public Double getSave(){
-		if(promotion && num>=2){ //参加“买二赠一”
-			return price*(num/2);
+		if(promotion && num>2){ //参加“买二赠一”
+			return price*(num/3);
 		}
 		return (num*price-total);
 	}
 	public String twoForOne(){
-		if(promotion && num>=2){
-			return ("名称："+name+"\t，数量："+(num/2)+unit+"\n");
+		if(promotion && num>2){
+			return ("名称："+name+"\t，数量："+(num/3)+unit+"\n");
 		}
 		return "";
 	}

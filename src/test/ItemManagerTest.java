@@ -6,9 +6,6 @@ import pos.ItemManager;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by hanchao on 2016/1/14.
- */
 public class ItemManagerTest {
     ItemManager items;
     @Before

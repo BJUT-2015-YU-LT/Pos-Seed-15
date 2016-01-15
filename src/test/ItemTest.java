@@ -4,9 +4,7 @@ import pos.Item;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by hanchao on 2016/1/14.
- */
+
 public class ItemTest {
     Item item;
     @org.junit.Before
