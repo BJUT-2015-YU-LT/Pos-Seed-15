@@ -26,8 +26,8 @@ public class Item{
 	public Double getTotal(){ //实际花的钱数
 		if(isVip)                 //vip客户
 			return (price*num*discount*vipDiscount);
-		if(promotion && num>=2){ //参加“买二赠一”
-			return (price*(num-num/2));
+		if(promotion && num>2){ //参加“买二赠一”
+			return (price*(num-num/3));
 		}
 		return (price*num*discount);//普通客户
 	}
@@ -37,8 +37,8 @@ public class Item{
 	public String twoForOne(){
 		if(isVip)
 			return "";
-		if(promotion && num>=2){
-			return ("名称："+name+"\t，数量："+(num/2)+unit+"\n");
+		if(promotion && num>2){
+			return ("名称："+name+"\t，数量："+(num/3)+unit+"\n");
 		}
 		return "";
 	}
