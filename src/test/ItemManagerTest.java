@@ -30,7 +30,7 @@ public class ItemManagerTest {
         Double result1=3.00*0.8*4.0;
         assertEquals(result1,items1.total());
         //非会员,买二赠一
-        Double result3=3.00*2.0;
+        Double result3=3.00*3.0;
         assertEquals(result3,items2.total());
     }
 

@@ -4,9 +4,6 @@ import pos.Item;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by hanchao on 2016/1/14.
- */
 public class ItemTest {
     Item item,item1,item2;
     @org.junit.Before
@@ -16,6 +13,8 @@ public class ItemTest {
         item.addItemNum();
         //   买二赠一
         item1 =new Item("ITEM000000","可口可乐","瓶" ,  3.00 ,0.80 , true,false,  1.00);
+        item1.addItemNum();
+        item1.addItemNum();
         item1.addItemNum();
         //   会员
         item2 =new Item("ITEM000000","可口可乐","瓶" ,  3.00 ,0.80 , true,true,  0.80);
@@ -28,7 +27,7 @@ public class ItemTest {
     public void testGetTotal() throws Exception {
         Double result=3.00*0.8*2.0;
         assertEquals(result, item.getTotal());
-        Double result1=3.00;
+        Double result1=3.00*3.0;
         assertEquals(result1, item1.getTotal());
         Double result2=3.00*0.8*2.0*0.8;
         assertEquals(result2, item2.getTotal());
