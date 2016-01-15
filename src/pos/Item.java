@@ -1,11 +1,13 @@
+package pos;
+
 public class Item{
-    String barcode;  //��Ʒ���
-    String name;	//��Ʒ��
-    String unit;    //��λ
-    double  price;
-    int num;
-    double total=0.0;
-    public Item(String b, String n, String u, double p){
+    String barcode;     // �商品编码�
+    String name;	     //�商品名�
+    String unit;        //��单位
+    Double  price;    //商品单价
+    int num;           //商品数量
+    Double total=0.0;  //总价
+    public Item(String b, String n, String u, Double p){
         barcode=b;
         name=n;
         unit=u;
@@ -21,7 +23,7 @@ public class Item{
         return ("名称："+name+"，数量："+num+unit+"，单价："
                 +price+"(元)"+"，小计："+total+"(元)"+"\n");
     }
-    public double getTotal(){
+    public Double getTotal(){
         return total;
     }
 }

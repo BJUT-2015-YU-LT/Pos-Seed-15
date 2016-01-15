@@ -1,10 +1,10 @@
-import java.util.Vector;
+package pos;
 
+import java.util.Vector;
 
 public class ItemManager {
     Vector<Item> items=new Vector<Item>();
-
-    public void addItem(String barcode, String name, String unit, double price){
+    public void addItem(String barcode, String name, String unit, Double price){
         int n=0;
         for(Item item:items){
             if(item.barcode.equals(barcode)){
@@ -16,8 +16,8 @@ public class ItemManager {
         if(n==items.size())
             items.addElement(new Item( barcode,name,unit,price));
     }
-    public double total(){
-        double  totals=0.0;
+    public Double total(){
+        Double  totals=0.0;
         for(Item item:items){
             totals+=item.getTotal();
         }
